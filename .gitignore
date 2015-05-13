@@ -3,3 +3,4 @@ __pycache__
 datas
 test
 settings.py
+.DS_Store
