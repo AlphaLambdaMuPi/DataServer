@@ -4,7 +4,7 @@ from scipy import stats
 import json
 import matplotlib.pyplot as plt
 
-f = list(open('Nexus-5-3.txt'))
+f = list(open('Nexus-5-2.txt'))
 f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
@@ -38,13 +38,13 @@ stat(acc)
 # plt.show()
 
 # np.random.shuffle(acc)
-acc -= np.mean(acc, axis=0)
+# acc -= np.mean(acc, axis=0)
 
-# newacc = acc * 0
-# K = 100
-# for i in range(-K, K+1):
-    # newacc += np.concatenate((acc[i:], acc[:i]), axis=0)
-# acc = newacc / (2*K+1)
+newacc = acc * 0
+K = 100
+for i in range(-K, K+1):
+    newacc += np.concatenate((acc[i:], acc[:i]), axis=0)
+acc = newacc / (2*K+1)
 
 
 # accfft = np.fft.fft(acc)
