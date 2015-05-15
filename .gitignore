@@ -1,6 +1,6 @@
 __pycache__
 *.log
-datas
+data/
 test
 settings.py
 .DS_Store
