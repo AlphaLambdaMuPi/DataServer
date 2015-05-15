@@ -17,7 +17,7 @@ class DataServer:
         self._loop = loop
         if not self._loop:
             self._loop = asyncio.get_event_loop()
-        self._datas = defaultdict(list)
+        self._datas = defaultdict(int)
         self._conns = {}
 
     @asyncio.coroutine
@@ -31,30 +31,31 @@ class DataServer:
                 logger.warning('same device connection!')
                 return
             self._conns[data['name']] = conn
-            record = []
-            self._datas[data['name']].append(record)
-            yield from self.record_data(conn, data['name'], record)
+            self._datas[data['name']] += 1
+            yield from self.record_data(conn, data['name'])
     
     @asyncio.coroutine
-    def record_data(self, conn, name, record):
+    def record_data(self, conn, name):
+        logger.info('recording {}...'.format(name))
+        record = []
         while True:
             data = yield from conn.recv()
             if not isinstance(data, dict):
                 continue
-            if 'stop' not in data and len(record) < 5000:
+            if 'stop' not in data and len(record) < 500000:
                 record.append(data)
             else:
                 logger.debug('data count: {}'.format(len(record)))
-                recordpath = 'data/{}-{}.txt'.format(
-                    name,
-                    len(self._datas[name])
-                )
-                with open(recordpath, 'w') as f:
-                    for r in record:
-                        print(json.dumps(r), file=f)
-                self._conns[name].close()
-                del self._conns[name]
                 break
+
+        yield from self._conns[name].close()
+        del self._conns[name]
+
+        recordpath = 'data/{}-{}.txt'.format(name, self._datas[name])
+        with open(recordpath, 'w') as f:
+            for r in record:
+                print(json.dumps(r), file=f)
+
 
     @asyncio.coroutine
     def stop(self):
