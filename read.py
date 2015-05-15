@@ -4,7 +4,7 @@ from scipy import stats
 import json
 import matplotlib.pyplot as plt
 
-f = list(open('Nexus-5-2.txt'))
+f = list(open('data/Nexus-5-2.txt'))
 f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
