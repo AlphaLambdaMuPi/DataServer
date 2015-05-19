@@ -1,0 +1,3 @@
+[submodule "rpg_svo"]
+	path = rpg_svo
+	url = https://github.com/uzh-rpg/rpg_svo.git
