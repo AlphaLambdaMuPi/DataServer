@@ -1,9 +1,9 @@
 /*
-Copyright 2012. All rights reserved.
-Institute of Measurement and Control Systems
-Karlsruhe Institute of Technology, Germany
+   Copyright 2012. All rights reserved.
+   Institute of Measurement and Control Systems
+   Karlsruhe Institute of Technology, Germany
 
-This file is part of libviso2.
+   This file is part of libviso2.
 Authors: Andreas Geiger
 
 libviso2 is free software; you can redistribute it and/or modify it under the
@@ -16,14 +16,14 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
 libviso2; if not, write to the Free Software Foundation, Inc., 51 Franklin
-Street, Fifth Floor, Boston, MA 02110-1301, USA 
+Street, Fifth Floor, Boston, MA 02110-1301, USA
 */
 
 /*
-  Documented C++ sample code of stereo visual odometry (modify to your needs)
-  To run this demonstration, download the Karlsruhe dataset sequence
-  '2010_03_09_drive_0019' from: www.cvlibs.net!
-  Usage: ./viso2 path/to/sequence/2010_03_09_drive_0019
+   Documented C++ sample code of stereo visual odometry (modify to your needs)
+   To run this demonstration, download the Karlsruhe dataset sequence
+   '2010_03_09_drive_0019' from: www.cvlibs.net!
+Usage: ./viso2 path/to/sequence/2010_03_09_drive_0019
 */
 
 #include <iostream>
@@ -34,108 +34,128 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA
 #include <viso_stereo.h>
 #include <viso_mono.h>
 #include <png++/png.hpp>
+#include <opencv2/opencv.hpp>
 
 using namespace std;
+using namespace cv;
 
-int main (int argc, char** argv) {
+const int WID = 480;
+const int HEI = 640;
+// const int WID = 1344;
+// const int HEI = 391;
 
-  // we need the path name to 2010_03_09_drive_0019 as input argument
-  if (argc<2) {
-    cerr << "Usage: ./viso2 path/to/sequence/2010_03_09_drive_0019" << endl;
-    return 1;
-  }
+int main(int argc, char** argv)
+{
 
-  // sequence directory
-  string dir = argv[1];
-  
-  // set most important visual odometry parameters
-  // for a full parameter list, look at: viso_stereo.h
-  // VisualOdometryStereo::parameters param;
-  VisualOdometryMono::parameters param;
-  
-  // calibration parameters for sequence 2010_03_09_drive_0019 
-  param.calib.f  = 645.24; // focal length in pixels
-  param.calib.cu = 635.96; // principal point (u-coordinate) in pixels
-  param.calib.cv = 194.13; // principal point (v-coordinate) in pixels
-  // param.base     = 0.5707; // baseline in meters
-  
-  // init visual odometry
-  // VisualOdometryStereo viso(param);
-  VisualOdometryMono viso(param);
-  
-  // current pose (this matrix transforms a point from the current
-  // frame's camera coordinates to the first frame's camera coordinates)
-  Matrix pose = Matrix::eye(4);
-    
-  // loop through all frames i=0:372
-  for (int32_t i=0; i<373; i++) {
+    // set most important visual odometry parameters
+    // for a full parameter list, look at: viso_stereo.h
+    VisualOdometryMono::parameters param;
 
-    // input file names
-    char base_name[256]; sprintf(base_name,"%06d.png",i);
-    string left_img_file_name  = dir + "/I1_" + base_name;
-    string right_img_file_name = dir + "/I2_" + base_name;
-    
-    // catch image read/write errors here
-    try {
+    // calibration parameters for sequence 2010_03_09_drive_0019
+    param.calib.f  = WID; // focal length in pixels
+    param.calib.cu = WID / 2; // principal point (u-coordinate) in pixels
+    param.calib.cv = HEI / 2; // principal point (v-coordinate) in pixels
+    // param.calib.f  = 645.24; // focal length in pixels
+    // param.calib.cu = 635.96; // principal point (u-coordinate) in pixels
+    // param.calib.cv = 194.13; // principal point (v-coordinate) in pixels
+    param.inlier_threshold = 3E-5;
+    param.motion_threshold = 100;
 
-      // load left and right input image
-      png::image< png::gray_pixel > left_img(left_img_file_name);
-      // png::image< png::gray_pixel > right_img(right_img_file_name);
+    // init visual odometry
+    // VisualOdometryStereo viso(param);
+    VisualOdometryMono viso(param);
 
-      // image dimensions
-      int32_t width  = left_img.get_width();
-      int32_t height = left_img.get_height();
+    // current pose (this matrix transforms a point from the current
+    // frame's camera coordinates to the first frame's camera coordinates)
+    Matrix pose = Matrix::eye(4);
 
-      // convert input images to uint8_t buffer
-      uint8_t* left_img_data  = (uint8_t*)malloc(width*height*sizeof(uint8_t));
-      // uint8_t* right_img_data = (uint8_t*)malloc(width*height*sizeof(uint8_t));
-      int32_t k=0;
-      for (int32_t v=0; v<height; v++) {
-        for (int32_t u=0; u<width; u++) {
-          left_img_data[k]  = left_img.get_pixel(u,v);
-          // right_img_data[k] = right_img.get_pixel(u,v);
-          k++;
+    int sig;
+    int cnt = -1;
+    while (~scanf("%d", &sig)) {
+        cnt++;
+
+        // input file names
+        // string left_img_file_name  = "img/I1c.png";
+        string x[6] = {"img/a1.jpg", "img/a2.jpg", "img/a3.jpg", "img/a4.jpg", "img/a5.jpg", "img/a6.jpg"};
+        // string x[6] = {"img/I1c.png", "img/I1p.png", "img/I2c.png", "img/I2p.png"};
+
+        // catch image read/write errors here
+        try {
+
+            // load left and right input image
+            string left_img_file_name  = x[cnt%4];
+            cout<<left_img_file_name<<endl;
+            // png::image< png::gray_pixel > left_img(left_img_file_name);
+            Mat left_img;
+            left_img = imread(left_img_file_name, CV_LOAD_IMAGE_GRAYSCALE);
+            resize(left_img, left_img, Size(WID, HEI));
+            // CImg<unsigned char> left_img(left_img_file_name.c_str());
+
+            // image dimensions
+            // int32_t width  = left_img.get_width();
+            // int32_t height = left_img.get_height();
+            int32_t width  = left_img.cols;
+            int32_t height = left_img.rows;
+            cout<<width<<" X "<<height<<endl;
+
+            // convert input images to uint8_t buffer
+            uint8_t* left_img_data  = (uint8_t*)malloc(width * height * sizeof(uint8_t));
+            int k = 0;
+            for (int v = 0; v < height; v++) {
+                for (int u = 0; u < width; u++) {
+                    // left_img_data[k]  = left_img.get_pixel(u, v);
+                    left_img_data[k] = left_img.at<uint8_t>(v, u);
+                    k++;
+                }
+            }
+
+            // compute visual odometry
+            int32_t dims[] = {width, height, width};
+            if (viso.process(left_img_data, dims)) {
+
+                // on success, update current pose
+                Matrix mot = Matrix::inv(viso.getMotion());
+                pose = pose * mot; 
+
+                // output some statistics
+                double num_matches = viso.getNumberOfMatches();
+                double num_inliers = viso.getNumberOfInliers();
+                cout << ", Matches: " << num_matches;
+                cout << ", Inliers: " << 100.0 * num_inliers / num_matches << " %" << ", Current pose: " << endl;
+                cout << pose << endl << endl;
+                // cout << mot << endl << endl;
+                // cout << pose.val[0][3] << " " << pose.val[1][3] << " " << pose.val[2][3] << endl;
+                vector<int> inliers = viso.getInlierIndices();
+                vector<Matcher::p_match> matches = viso.getMatches();
+                for(int i=0; i<num_inliers; i++)
+                {
+                    Matcher::p_match pmat = matches[inliers[i]];
+                    int u = pmat.u1c, v = pmat.v1c;
+                    left_img.at<uint8_t>(v, u) = 255;
+                    left_img.at<uint8_t>(v+1, u) = 0;
+                    left_img.at<uint8_t>(v-1, u) = 0;
+                    left_img.at<uint8_t>(v, u+1) = 0;
+                    left_img.at<uint8_t>(v, u-1) = 0;
+                }
+                imwrite("AAA.jpg", left_img);
+
+            }
+            else {
+                cout << " ... failed!" << endl;
+            }
+
+            // release uint8_t buffers
+            free(left_img_data);
+
+            // catch image read errors here
         }
-      }
-
-      // status
-      // cout << "Processing: Frame: " << i;
-      
-      // compute visual odometry
-      int32_t dims[] = {width,height,width};
-      // if (viso.process(left_img_data,right_img_data,dims)) {
-      if (viso.process(left_img_data,dims)) {
-      
-        // on success, update current pose
-        pose = pose * Matrix::inv(viso.getMotion());
-      
-        // output some statistics
-        double num_matches = viso.getNumberOfMatches();
-        double num_inliers = viso.getNumberOfInliers();
-        // cout << ", Matches: " << num_matches;
-        // cout << ", Inliers: " << 100.0*num_inliers/num_matches << " %" << ", Current pose: " << endl;
-        // cout << pose << endl << endl;
-        cout << pose.val[0][3] << " " << pose.val[1][3] << " " << pose.val[2][3] << endl;
-
-      } else {
-        cout << " ... failed!" << endl;
-      }
-
-      // release uint8_t buffers
-      free(left_img_data);
-      // free(right_img_data);
-
-    // catch image read errors here
-    } catch (...) {
-      cerr << "ERROR: Couldn't read input files!" << endl;
-      return 1;
+        catch (...) {
+            cerr << "ERROR: Couldn't read input files!" << endl;
+            return 1;
+        }
     }
-  }
-  
-  // output
-  cout << "Demo complete! Exiting ..." << endl;
 
-  // exit
-  return 0;
+    // exit
+    return 0;
 }
 

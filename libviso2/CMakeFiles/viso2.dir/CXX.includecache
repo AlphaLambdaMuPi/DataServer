@@ -21,6 +21,8 @@ viso_mono.h
 -
 png++/png.hpp
 -
+opencv2/opencv.hpp
+-
 
 /home/step5/DataServer/libviso2/src/filter.cpp
 stdio.h
