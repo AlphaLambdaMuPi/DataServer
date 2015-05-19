@@ -2,18 +2,31 @@ import numpy as np
 import scipy
 from scipy import stats
 import json
+import base64
 import matplotlib.pyplot as plt
 
-f = list(open('data/Nexus-5-2.txt'))
+f = list(open('data/LT29i-6.txt'))
 f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
 tm = []
+
+pic = {}
+
 for d in f:
-    if d['type'] != 'accel':
-        continue
-    tm.append(d['time'])
-    acc.append(json.loads(d['data']))
+    if d['type'] == 'accel':
+        tm.append(d['time'])
+        acc.append(json.loads(d['data']))
+    elif d['type'] == 'camera':
+        tim = d['time']
+        if tim not in pic:
+            pic[tim] = ''
+        pic[tim] += d['data'].replace('\n', '')
+
+for i in pic:
+    pic[i] = base64.b64decode(bytes(pic[i]+'a==', 'ascii'))
+    print(len(pic[i]))
+    print(pic[i][-10:])
 
 acc = np.array(acc)
 tm = np.array(tm) / 1E9
@@ -27,6 +40,9 @@ def stat(x):
 print(len(tm))
 
 stat(acc)
+
+
+exit()
 
 # accfft = np.fft.fft(acc, axis=0)
 # print(accfft.shape)
