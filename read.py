@@ -4,8 +4,9 @@ from scipy import stats
 import json
 import base64
 import matplotlib.pyplot as plt
+import cv2
 
-f = list(open('data/LT29i-6.txt'))
+f = list(open('data/Nexus 5-4.txt'))
 f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
@@ -23,10 +24,23 @@ for d in f:
             pic[tim] = ''
         pic[tim] += d['data'].replace('\n', '')
 
+cnt = 0
 for i in pic:
-    pic[i] = base64.b64decode(bytes(pic[i]+'a==', 'ascii'))
+    cnt += 1
+    pic[i] = base64.b64decode(bytes(pic[i], 'ascii'))
     print(len(pic[i]))
-    print(pic[i][-10:])
+
+    height = 240
+    width = 320
+
+    p = list(pic[i])
+    p = np.array(p).reshape(height*1.5, width).astype('uint8')
+    p = cv2.cvtColor(p, cv2.COLOR_YUV2RGBA_NV21)
+    # cv2.imshow('a', p)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    cv2.imwrite('libviso2/img/b{:03d}.jpg'.format(cnt), p)
+
 
 acc = np.array(acc)
 tm = np.array(tm) / 1E9
