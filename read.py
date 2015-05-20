@@ -6,7 +6,7 @@ import base64
 import matplotlib.pyplot as plt
 import cv2
 
-f = list(open('data/Nexus 5-4.txt'))
+f = list(open('data/Nexus 5-3.txt'))
 f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
@@ -25,17 +25,20 @@ for d in f:
         pic[tim] += d['data'].replace('\n', '')
 
 cnt = 0
-for i in pic:
+for i in sorted(pic.keys()):
     cnt += 1
     pic[i] = base64.b64decode(bytes(pic[i], 'ascii'))
     print(len(pic[i]))
 
-    height = 240
-    width = 320
+    height = 480
+    width = 640
 
     p = list(pic[i])
     p = np.array(p).reshape(height*1.5, width).astype('uint8')
     p = cv2.cvtColor(p, cv2.COLOR_YUV2RGBA_NV21)
+    p = p[:,:,[2,1,0,3]]
+    p = p.transpose((1, 0, 2))
+    p = p[:,::-1,:]
     # cv2.imshow('a', p)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
