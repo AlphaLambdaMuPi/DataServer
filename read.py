@@ -6,44 +6,45 @@ import base64
 import matplotlib.pyplot as plt
 import cv2
 
-f = list(open('data/Nexus 5-3.txt'))
-f = [json.loads(x.strip('\n')) for x in f]
+# f = list(open('data/Nexus 5-3.txt'))
+# f = [json.loads(x.strip('\n')) for x in f]
 
 acc = []
 tm = []
 
 pic = {}
 
-for d in f:
+def set_data(d):
     if d['type'] == 'accel':
-        tm.append(d['time'])
-        acc.append(json.loads(d['data']))
+        set_accel(json.loads(d['data']), d['time'])
     elif d['type'] == 'camera':
         tim = d['time']
         if tim not in pic:
             pic[tim] = ''
-        pic[tim] += d['data'].replace('\n', '')
+        if d['data'] != '!':
+            pic[tim] += d['data'].replace('\n', '')
+        else:
+            p = base64.b64decode(bytes(pic[tim], 'ascii'))
+            del pic[tim]
+            set_picture(p, tim)
 
-cnt = 0
-for i in sorted(pic.keys()):
-    cnt += 1
-    pic[i] = base64.b64decode(bytes(pic[i], 'ascii'))
-    print(len(pic[i]))
+def set_accel(acc, tim):
+    print('Get accel : {}'.format(tim))
 
+def set_picture(p, tim):
     height = 480
     width = 640
 
-    p = list(pic[i])
+    p = list(p)
     p = np.array(p).reshape(height*1.5, width).astype('uint8')
     p = cv2.cvtColor(p, cv2.COLOR_YUV2RGBA_NV21)
     p = p[:,:,[2,1,0,3]]
     p = p.transpose((1, 0, 2))
     p = p[:,::-1,:]
-    # cv2.imshow('a', p)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
-    cv2.imwrite('libviso2/img/b{:03d}.jpg'.format(cnt), p)
+    cv2.imwrite('libviso2/img/beta.jpg', p)
+    print('Get Picture : {}'.format(tim))
 
+exit()
 
 acc = np.array(acc)
 tm = np.array(tm) / 1E9
@@ -59,7 +60,6 @@ print(len(tm))
 stat(acc)
 
 
-exit()
 
 # accfft = np.fft.fft(acc, axis=0)
 # print(accfft.shape)
