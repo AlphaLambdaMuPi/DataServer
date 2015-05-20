@@ -39,8 +39,8 @@ Usage: ./viso2 path/to/sequence/2010_03_09_drive_0019
 using namespace std;
 using namespace cv;
 
-const int WID = 480;
-const int HEI = 640;
+const int WID = 240*2;
+const int HEI = 320*2;
 // const int WID = 1344;
 // const int HEI = 391;
 
@@ -58,8 +58,11 @@ int main(int argc, char** argv)
     // param.calib.f  = 645.24; // focal length in pixels
     // param.calib.cu = 635.96; // principal point (u-coordinate) in pixels
     // param.calib.cv = 194.13; // principal point (v-coordinate) in pixels
-    param.inlier_threshold = 3E-5;
-    param.motion_threshold = 100;
+    // param.inlier_threshold = 3E-5;
+    param.motion_threshold = 200;
+    param.bucket.bucket_width = WID/16;
+    param.bucket.bucket_height = HEI/16;
+    param.bucket.max_features = 3;
 
     // init visual odometry
     // VisualOdometryStereo viso(param);
@@ -76,14 +79,18 @@ int main(int argc, char** argv)
 
         // input file names
         // string left_img_file_name  = "img/I1c.png";
-        string x[6] = {"img/a1.jpg", "img/a2.jpg", "img/a3.jpg", "img/a4.jpg", "img/a5.jpg", "img/a6.jpg"};
+        // string x[6] = {"img/a1.jpg", "img/a2.jpg", "img/a3.jpg", "img/a4.jpg", "img/a5.jpg", "img/a6.jpg"};
+        // string x[4] = {"img/b001.jpg", "img/b002.jpg", "img/b003.jpg", "img/b004.jpg"};
         // string x[6] = {"img/I1c.png", "img/I1p.png", "img/I2c.png", "img/I2p.png"};
 
         // catch image read/write errors here
         try {
 
             // load left and right input image
-            string left_img_file_name  = x[cnt%4];
+            // string left_img_file_name  = x[cnt%4];
+            char trf[1000];
+            sprintf(trf, "img/b%03d.jpg", (cnt%500)+1);
+            string left_img_file_name = trf;
             cout<<left_img_file_name<<endl;
             // png::image< png::gray_pixel > left_img(left_img_file_name);
             Mat left_img;

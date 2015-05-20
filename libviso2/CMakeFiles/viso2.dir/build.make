@@ -49,55 +49,9 @@ include CMakeFiles/viso2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/viso2.dir/flags.make
 
-CMakeFiles/viso2.dir/src/viso_mono.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/viso_mono.cpp.o: src/viso_mono.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/viso_mono.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/viso_mono.cpp.o -c /home/step5/DataServer/libviso2/src/viso_mono.cpp
-
-CMakeFiles/viso2.dir/src/viso_mono.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/viso_mono.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/viso_mono.cpp > CMakeFiles/viso2.dir/src/viso_mono.cpp.i
-
-CMakeFiles/viso2.dir/src/viso_mono.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/viso_mono.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/viso_mono.cpp -o CMakeFiles/viso2.dir/src/viso_mono.cpp.s
-
-CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
-
-CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides: CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides
-
-CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides.build: CMakeFiles/viso2.dir/src/viso_mono.cpp.o
-
-CMakeFiles/viso2.dir/src/matrix.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/matrix.cpp.o: src/matrix.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/matrix.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/matrix.cpp.o -c /home/step5/DataServer/libviso2/src/matrix.cpp
-
-CMakeFiles/viso2.dir/src/matrix.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/matrix.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/matrix.cpp > CMakeFiles/viso2.dir/src/matrix.cpp.i
-
-CMakeFiles/viso2.dir/src/matrix.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/matrix.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/matrix.cpp -o CMakeFiles/viso2.dir/src/matrix.cpp.s
-
-CMakeFiles/viso2.dir/src/matrix.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
-
-CMakeFiles/viso2.dir/src/matrix.cpp.o.provides: CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/matrix.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/matrix.cpp.o.provides
-
-CMakeFiles/viso2.dir/src/matrix.cpp.o.provides.build: CMakeFiles/viso2.dir/src/matrix.cpp.o
-
 CMakeFiles/viso2.dir/src/viso.cpp.o: CMakeFiles/viso2.dir/flags.make
 CMakeFiles/viso2.dir/src/viso.cpp.o: src/viso.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/viso.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/viso.cpp.o -c /home/step5/DataServer/libviso2/src/viso.cpp
 
@@ -118,32 +72,9 @@ CMakeFiles/viso2.dir/src/viso.cpp.o.provides: CMakeFiles/viso2.dir/src/viso.cpp.
 
 CMakeFiles/viso2.dir/src/viso.cpp.o.provides.build: CMakeFiles/viso2.dir/src/viso.cpp.o
 
-CMakeFiles/viso2.dir/src/demo.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/demo.cpp.o: src/demo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/demo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/demo.cpp.o -c /home/step5/DataServer/libviso2/src/demo.cpp
-
-CMakeFiles/viso2.dir/src/demo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/demo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/demo.cpp > CMakeFiles/viso2.dir/src/demo.cpp.i
-
-CMakeFiles/viso2.dir/src/demo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/demo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/demo.cpp -o CMakeFiles/viso2.dir/src/demo.cpp.s
-
-CMakeFiles/viso2.dir/src/demo.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/demo.cpp.o.requires
-
-CMakeFiles/viso2.dir/src/demo.cpp.o.provides: CMakeFiles/viso2.dir/src/demo.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/demo.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/demo.cpp.o.provides
-
-CMakeFiles/viso2.dir/src/demo.cpp.o.provides.build: CMakeFiles/viso2.dir/src/demo.cpp.o
-
 CMakeFiles/viso2.dir/src/triangle.cpp.o: CMakeFiles/viso2.dir/flags.make
 CMakeFiles/viso2.dir/src/triangle.cpp.o: src/triangle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/triangle.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/triangle.cpp.o -c /home/step5/DataServer/libviso2/src/triangle.cpp
 
@@ -164,78 +95,32 @@ CMakeFiles/viso2.dir/src/triangle.cpp.o.provides: CMakeFiles/viso2.dir/src/trian
 
 CMakeFiles/viso2.dir/src/triangle.cpp.o.provides.build: CMakeFiles/viso2.dir/src/triangle.cpp.o
 
-CMakeFiles/viso2.dir/src/matcher.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/matcher.cpp.o: src/matcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/matcher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/matcher.cpp.o -c /home/step5/DataServer/libviso2/src/matcher.cpp
+CMakeFiles/viso2.dir/src/matrix.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/matrix.cpp.o: src/matrix.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/matrix.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/matrix.cpp.o -c /home/step5/DataServer/libviso2/src/matrix.cpp
 
-CMakeFiles/viso2.dir/src/matcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/matcher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/matcher.cpp > CMakeFiles/viso2.dir/src/matcher.cpp.i
+CMakeFiles/viso2.dir/src/matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/matrix.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/matrix.cpp > CMakeFiles/viso2.dir/src/matrix.cpp.i
 
-CMakeFiles/viso2.dir/src/matcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/matcher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/matcher.cpp -o CMakeFiles/viso2.dir/src/matcher.cpp.s
+CMakeFiles/viso2.dir/src/matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/matrix.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/matrix.cpp -o CMakeFiles/viso2.dir/src/matrix.cpp.s
 
-CMakeFiles/viso2.dir/src/matcher.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
+CMakeFiles/viso2.dir/src/matrix.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
 
-CMakeFiles/viso2.dir/src/matcher.cpp.o.provides: CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/matcher.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/matcher.cpp.o.provides
+CMakeFiles/viso2.dir/src/matrix.cpp.o.provides: CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/matrix.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/matrix.cpp.o.provides
 
-CMakeFiles/viso2.dir/src/matcher.cpp.o.provides.build: CMakeFiles/viso2.dir/src/matcher.cpp.o
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.o: src/viso_stereo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/viso_stereo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/viso_stereo.cpp.o -c /home/step5/DataServer/libviso2/src/viso_stereo.cpp
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/viso_stereo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/viso_stereo.cpp > CMakeFiles/viso2.dir/src/viso_stereo.cpp.i
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/viso_stereo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/viso_stereo.cpp -o CMakeFiles/viso2.dir/src/viso_stereo.cpp.s
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides
-
-CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides.build: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.o: CMakeFiles/viso2.dir/flags.make
-CMakeFiles/viso2.dir/src/reconstruction.cpp.o: src/reconstruction.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/reconstruction.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/reconstruction.cpp.o -c /home/step5/DataServer/libviso2/src/reconstruction.cpp
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/reconstruction.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/reconstruction.cpp > CMakeFiles/viso2.dir/src/reconstruction.cpp.i
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/reconstruction.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/reconstruction.cpp -o CMakeFiles/viso2.dir/src/reconstruction.cpp.s
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires:
-.PHONY : CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides: CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
-	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides.build
-.PHONY : CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides
-
-CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides.build: CMakeFiles/viso2.dir/src/reconstruction.cpp.o
+CMakeFiles/viso2.dir/src/matrix.cpp.o.provides.build: CMakeFiles/viso2.dir/src/matrix.cpp.o
 
 CMakeFiles/viso2.dir/src/filter.cpp.o: CMakeFiles/viso2.dir/flags.make
 CMakeFiles/viso2.dir/src/filter.cpp.o: src/filter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/filter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/filter.cpp.o -c /home/step5/DataServer/libviso2/src/filter.cpp
 
@@ -256,30 +141,145 @@ CMakeFiles/viso2.dir/src/filter.cpp.o.provides: CMakeFiles/viso2.dir/src/filter.
 
 CMakeFiles/viso2.dir/src/filter.cpp.o.provides.build: CMakeFiles/viso2.dir/src/filter.cpp.o
 
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.o: src/viso_stereo.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/viso_stereo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/viso_stereo.cpp.o -c /home/step5/DataServer/libviso2/src/viso_stereo.cpp
+
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/viso_stereo.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/viso_stereo.cpp > CMakeFiles/viso2.dir/src/viso_stereo.cpp.i
+
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/viso_stereo.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/viso_stereo.cpp -o CMakeFiles/viso2.dir/src/viso_stereo.cpp.s
+
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
+
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides
+
+CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.provides.build: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o
+
+CMakeFiles/viso2.dir/src/demo.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/demo.cpp.o: src/demo.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/demo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/demo.cpp.o -c /home/step5/DataServer/libviso2/src/demo.cpp
+
+CMakeFiles/viso2.dir/src/demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/demo.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/demo.cpp > CMakeFiles/viso2.dir/src/demo.cpp.i
+
+CMakeFiles/viso2.dir/src/demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/demo.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/demo.cpp -o CMakeFiles/viso2.dir/src/demo.cpp.s
+
+CMakeFiles/viso2.dir/src/demo.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/demo.cpp.o.requires
+
+CMakeFiles/viso2.dir/src/demo.cpp.o.provides: CMakeFiles/viso2.dir/src/demo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/demo.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/demo.cpp.o.provides
+
+CMakeFiles/viso2.dir/src/demo.cpp.o.provides.build: CMakeFiles/viso2.dir/src/demo.cpp.o
+
+CMakeFiles/viso2.dir/src/matcher.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/matcher.cpp.o: src/matcher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/matcher.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/matcher.cpp.o -c /home/step5/DataServer/libviso2/src/matcher.cpp
+
+CMakeFiles/viso2.dir/src/matcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/matcher.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/matcher.cpp > CMakeFiles/viso2.dir/src/matcher.cpp.i
+
+CMakeFiles/viso2.dir/src/matcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/matcher.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/matcher.cpp -o CMakeFiles/viso2.dir/src/matcher.cpp.s
+
+CMakeFiles/viso2.dir/src/matcher.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
+
+CMakeFiles/viso2.dir/src/matcher.cpp.o.provides: CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/matcher.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/matcher.cpp.o.provides
+
+CMakeFiles/viso2.dir/src/matcher.cpp.o.provides.build: CMakeFiles/viso2.dir/src/matcher.cpp.o
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/viso_mono.cpp.o: src/viso_mono.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/viso_mono.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/viso_mono.cpp.o -c /home/step5/DataServer/libviso2/src/viso_mono.cpp
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/viso_mono.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/viso_mono.cpp > CMakeFiles/viso2.dir/src/viso_mono.cpp.i
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/viso_mono.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/viso_mono.cpp -o CMakeFiles/viso2.dir/src/viso_mono.cpp.s
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides: CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides
+
+CMakeFiles/viso2.dir/src/viso_mono.cpp.o.provides.build: CMakeFiles/viso2.dir/src/viso_mono.cpp.o
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.o: CMakeFiles/viso2.dir/flags.make
+CMakeFiles/viso2.dir/src/reconstruction.cpp.o: src/reconstruction.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/step5/DataServer/libviso2/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/viso2.dir/src/reconstruction.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/viso2.dir/src/reconstruction.cpp.o -c /home/step5/DataServer/libviso2/src/reconstruction.cpp
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viso2.dir/src/reconstruction.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/step5/DataServer/libviso2/src/reconstruction.cpp > CMakeFiles/viso2.dir/src/reconstruction.cpp.i
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viso2.dir/src/reconstruction.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/step5/DataServer/libviso2/src/reconstruction.cpp -o CMakeFiles/viso2.dir/src/reconstruction.cpp.s
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires:
+.PHONY : CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides: CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viso2.dir/build.make CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides.build
+.PHONY : CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides
+
+CMakeFiles/viso2.dir/src/reconstruction.cpp.o.provides.build: CMakeFiles/viso2.dir/src/reconstruction.cpp.o
+
 # Object files for target viso2
 viso2_OBJECTS = \
-"CMakeFiles/viso2.dir/src/viso_mono.cpp.o" \
-"CMakeFiles/viso2.dir/src/matrix.cpp.o" \
 "CMakeFiles/viso2.dir/src/viso.cpp.o" \
-"CMakeFiles/viso2.dir/src/demo.cpp.o" \
 "CMakeFiles/viso2.dir/src/triangle.cpp.o" \
-"CMakeFiles/viso2.dir/src/matcher.cpp.o" \
+"CMakeFiles/viso2.dir/src/matrix.cpp.o" \
+"CMakeFiles/viso2.dir/src/filter.cpp.o" \
 "CMakeFiles/viso2.dir/src/viso_stereo.cpp.o" \
-"CMakeFiles/viso2.dir/src/reconstruction.cpp.o" \
-"CMakeFiles/viso2.dir/src/filter.cpp.o"
+"CMakeFiles/viso2.dir/src/demo.cpp.o" \
+"CMakeFiles/viso2.dir/src/matcher.cpp.o" \
+"CMakeFiles/viso2.dir/src/viso_mono.cpp.o" \
+"CMakeFiles/viso2.dir/src/reconstruction.cpp.o"
 
 # External object files for target viso2
 viso2_EXTERNAL_OBJECTS =
 
-viso2: CMakeFiles/viso2.dir/src/viso_mono.cpp.o
-viso2: CMakeFiles/viso2.dir/src/matrix.cpp.o
 viso2: CMakeFiles/viso2.dir/src/viso.cpp.o
-viso2: CMakeFiles/viso2.dir/src/demo.cpp.o
 viso2: CMakeFiles/viso2.dir/src/triangle.cpp.o
-viso2: CMakeFiles/viso2.dir/src/matcher.cpp.o
-viso2: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o
-viso2: CMakeFiles/viso2.dir/src/reconstruction.cpp.o
+viso2: CMakeFiles/viso2.dir/src/matrix.cpp.o
 viso2: CMakeFiles/viso2.dir/src/filter.cpp.o
+viso2: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o
+viso2: CMakeFiles/viso2.dir/src/demo.cpp.o
+viso2: CMakeFiles/viso2.dir/src/matcher.cpp.o
+viso2: CMakeFiles/viso2.dir/src/viso_mono.cpp.o
+viso2: CMakeFiles/viso2.dir/src/reconstruction.cpp.o
 viso2: CMakeFiles/viso2.dir/build.make
 viso2: /usr/local/lib/libopencv_videostab.so.3.0.0
 viso2: /usr/local/lib/libopencv_ts.a
@@ -321,15 +321,15 @@ viso2: CMakeFiles/viso2.dir/link.txt
 CMakeFiles/viso2.dir/build: viso2
 .PHONY : CMakeFiles/viso2.dir/build
 
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
 CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/viso.cpp.o.requires
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/demo.cpp.o.requires
 CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/triangle.cpp.o.requires
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
-CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/matrix.cpp.o.requires
 CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/filter.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/viso_stereo.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/demo.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/matcher.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/viso_mono.cpp.o.requires
+CMakeFiles/viso2.dir/requires: CMakeFiles/viso2.dir/src/reconstruction.cpp.o.requires
 .PHONY : CMakeFiles/viso2.dir/requires
 
 CMakeFiles/viso2.dir/clean:
